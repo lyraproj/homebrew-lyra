@@ -14,6 +14,7 @@ class Lyra < Formula
     bin.install "build/lyra" => "lyra"
     prefix.install Dir["build/goplugins"]
     prefix.install Dir["workflows"]
+    prefix.install Dir["types"]
     prefix.install Dir["examples"]
     prefix.install Dir["docs"]
   end
