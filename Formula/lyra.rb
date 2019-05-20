@@ -1,8 +1,8 @@
 class Lyra < Formula
-  version = "v0.1.0"
+  version = "v0.2.0"
   homepage "https://github.com/lyraproj/lyra"
   url "https://github.com/lyraproj/lyra/archive/#{version}.tar.gz"
-  sha256 "757530ace4fae027734c09b666ae27c81bee96f0265d6f2ed98b80ea3ebcaf11"
+  sha256 "a609a6b7d0cad669c8e3144890d7c6a9d7a47fe92d2c53d167f6f9fa82c608d6"
 
   head "https://github.com/lyraproj/lyra.git"
 
@@ -25,7 +25,7 @@ class Lyra < Formula
     # "#{root_url}/#{name}-#{version}.#{tag}.bottle.#{revision}.tar.gz"
     root_url "https://github.com/lyraproj/lyra/releases/download/#{version}/"
     cellar :any_skip_relocation
-    sha256 "40c6bd77db2314bebeb7f2f56dc62690f70515ae01d209bfe4f9277cf85233c3" => :high_sierra
+    sha256 "683b3e2971da9af10dee12aaac161767d52347ac645f9f97fb14804be25731b2" => :high_sierra
   end
 
   test do
