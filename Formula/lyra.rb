@@ -11,13 +11,14 @@ class Lyra < Formula
 
   def install
     system "make lyra plugins"
-    bin.install "build/bin/lyra" => "lyra"
+    system "make generate"
     prefix.install Dir["build/goplugins"]
+    prefix.install Dir["build/types"]
     prefix.install Dir["workflows"]
-    prefix.install Dir["types"]
     prefix.install Dir["examples"]
     prefix.install Dir["docs"]
     prefix.install "data.yaml"
+    bin.install "build/bin/lyra" => "lyra"
   end
 
   bottle do
@@ -25,7 +26,7 @@ class Lyra < Formula
     # "#{root_url}/#{name}-#{version}.#{tag}.bottle.#{revision}.tar.gz"
     root_url "https://github.com/lyraproj/lyra/releases/download/#{version}/"
     cellar :any_skip_relocation
-    sha256 "683b3e2971da9af10dee12aaac161767d52347ac645f9f97fb14804be25731b2" => :high_sierra
+    sha256 "02e822933fcc14594686c0d831b90525862dd157fdbf65b0b1d0d8e5a64b45b9" => :high_sierra
   end
 
   test do
