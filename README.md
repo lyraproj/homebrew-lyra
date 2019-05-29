@@ -22,8 +22,8 @@ Steps for a release:
   - clone this repo and symlink it to `/usr/local/Homebrew/Library/Taps/lyraproj/homebrew-lyra`
 * create the release in upstream lyra github repo
   - create & push a tag in the lyra repo following `vX.y.z` semver format
-  - create a 'release' off the github page for that tag and get the sha256sum for it:
-    `openssl sha256 vX.Y.Z.tar.gz`
+  - create a 'release' off the github page for that tag, then download it and get the sha256sum for the tarball:
+    `openssl sha256 lyra-vX.Y.Z.tar.gz`
 * build the bottle
   - edit homebrew-lyra/Formula/lyra.rb,  bump `version` and `tag` (based on the sha256 from the previous step)
   - run `brew install --build-bottle lyra` (you may want to add `--keep-tmp` if troubleshooting the build itself, as otherwise there's no way to debug a failing build)
